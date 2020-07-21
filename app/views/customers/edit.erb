@@ -1,0 +1,31 @@
+<h2>Edit your customer details.</h2>
+<form action="/customers/<%= @customer.id %>" method="post">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+
+    
+<p><label for="company" id="company">Company_name<h5>(eg: IBM): </h5></label>
+      <input type="text" name="company"></p>    
+
+<p><label for="contact_name" id="contact_name">Contacts_Name<h5>(eg: Eddie): </h5></label>
+      <input type="text" name="contact_name"></p>    
+
+<p><label for="email" id="email">Email<h5>(eg: Blank@blank.com ): </h5></label>
+      <input type="text" name="email"></p>    
+
+<p><label for="phone" id="phone">
+Phone<h5>(eg: 7204959203): </h5></label>
+      <input type="text" name="phone"></p>    
+
+<p><label for="web_specs" id="web_specs"><br>Customer Specs Discription<br>
+<textarea id="web_specs" name="web_specs" rows="4" cols="50"></textarea></p>
+
+    <input type="submit" value="Update">    
+</form>
+
+<h2>To remove this customer click DELETE.</h2>
+<form action="/customers/<%= @customer.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
+<h3>This action cannot be undone!</h3>
+<a href="/my_customers">Never mind</a>

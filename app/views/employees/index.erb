@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All Employees!!</title>
+    </head>
+    <body>
+        <h1>All Registered Users</h1>
+        <ol type="1">
+        <% @employee.each do |e|%>
+            
+                <li>
+                    <a>
+                        <%= e.name%><br><%= e.email%>
+                    </a>
+                </li>
+                <br>        
+            
+            <% end %> 
+        </ol>         
+    </body>
+</html>

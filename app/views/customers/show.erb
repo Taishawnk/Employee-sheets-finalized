@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All your Clients!!</title>
+    </head>
+    <body>
+        <h1>One Important new customer, <%=current_employee.name%>!</h1>
+        <ol type="1">          
+            
+            <li>
+                <%= @customer.company%><br>
+                <%= @customer.contact_name%><br>
+                <%= @customer.email%><br>
+                <%= @customer.phone%><br><br>
+                <%= @customer.web_specs%><br>
+            </li><br>               
+             
+        </ol>         
+    </body>
+</html>
+<h2>Add another <a href="/new_customer">customer</a>?</h2>
+<h2>See my <a href="/my_customers">Clients</a>.</h2>
+
+<button onclick="goBack()">Go Back</button> <br>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+    </body>
+</html>
+
+  <%# create_table :customers do |t|
+      t.string :company
+      t.string :contact_name
+      t.string :email
+      t.string :phone
+      t.text :web_specs
+      t.integer :employee_id  
+    end %>

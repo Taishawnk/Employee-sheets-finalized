@@ -1,0 +1,31 @@
+<style>
+    .center {
+            text-align: center;        
+        }
+</style>
+      
+ <body>
+ <div class = "center">
+   <h1><%="Select a customer to edit or"%></h1>
+   <h3><%="remove from Client list,"%></h3>
+ </div>
+
+ 
+</body>
+
+
+
+<ol type="1">
+<% @customer.each do |c|%>            
+    <li>
+        <a href="/customers/<%= c.id%>/edit">
+                 <%= c.company%><br>
+                <%= c.contact_name%><br>
+                <%= c.email%><br>
+                <%= c.phone%><br>
+                <%= c.web_specs%>
+        </a>
+    
+    </li>
+               
+<% end %>

@@ -1,0 +1,6 @@
+<% @employee.each do |e|%>
+    <ul>
+    <li>
+    <a href="/employees/<%=e.id%>/customers"> <%=e.name %></a>
+    </ul>
+    <% end %>

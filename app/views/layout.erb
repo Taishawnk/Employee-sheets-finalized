@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <title>TriForge</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+  </head>
+  <style>
+    body     
+    
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+   
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+   
+    .topnav a:hover {
+      background-color: ;
+      color: crimson;
+    }
+
+    
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: red;
+    }
+
+    .logoz-image {
+    
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/.public/images/triforge-empty-white.png');
+    
+    
+      height: 50% ;
+    
+    
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+  </style>
+  
+
+
+  <body>  
+    <div class="logoz-image">
+      <div class="logoz-text">
+        <div class="topnav">
+          <a class="active" href="/">Main</a>
+          <a href='/employees/:id'>Employee Page</a>
+          <a href="/employees">Other </a>
+          <a href="/logout">Logout</a>
+        </div>
+      </div>
+   
+   
+    
+    </div>
+          
+      
+
+    <div class="wrapper">
+
+        <%= yield %>
+
+      <footer class="branding">
+        <small>&copy; 2020 <strong>TriForge</strong></small>
+      </footer>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!--[if lt IE 7]>
+      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+      <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+    <![endif]-->
+
+    
+
+  </body>
+</html>
+
+<!--<a href="/logout">Logout</a>-->

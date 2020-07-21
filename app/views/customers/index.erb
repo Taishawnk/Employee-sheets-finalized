@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All customer!!</title>
+    </head>
+    <body>
+        <h1>Look at <%= @employee.name%>'s customers!</h1>
+        
+        <ol tyce="1">
+        <% @employee.customers.each do |c|%>            
+                <li> 
+                    <a "/customers/ <%= c.id%>">
+                     <%= c.company%><br>
+                    <%= c.contact_name%><br>
+                    <%= c.email%><br>
+                    <%= c.phone%><br>
+                    <%= c.web_specs%><br><br>
+                    </a>
+                
+                </li>
+                           
+            <% end %> 
+        </ol>   
+
+           
