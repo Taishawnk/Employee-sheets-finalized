@@ -51,7 +51,7 @@ class CustomersController < ApplicationController
      
      patch "/customers/:id" do
        @customer = Customer.find_by_id(params[:id])
-       @customer.update(source: params[:source], emailgory: params[:emailgory], emailgory_source: params[:emailgory_source], customer: params[:customer])
+       @customer.update(company: params[:company], contact_name: params[:contact_name], email: params[:email], phone: params[:phone], web_specs: params[:webspecs]) 
        redirect to "/customers/#{@customer.id}"
      end
   
@@ -63,3 +63,4 @@ class CustomersController < ApplicationController
      end
   end  
   
+ 

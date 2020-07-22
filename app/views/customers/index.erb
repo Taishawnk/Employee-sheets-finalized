@@ -6,10 +6,10 @@
     <body>
         <h1>Look at <%= @employee.name%>'s customers!</h1>
         
-        <ol tyce="1">
+        <ol type="1">
         <% @employee.customers.each do |c|%>            
                 <li> 
-                    <a "/customers/ <%= c.id%>">
+                    <a href= "/customers/ <%= c.id%>">
                      <%= c.company%><br>
                     <%= c.contact_name%><br>
                     <%= c.email%><br>
@@ -20,6 +20,6 @@
                 </li>
                            
             <% end %> 
-        </ol>   
+        </ol>  
 
            
