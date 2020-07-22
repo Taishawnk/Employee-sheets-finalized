@@ -4,7 +4,7 @@ class EmployeesController < ApplicationController
       if !logged_in?
           erb :'employees/new'
       else
-          # @employee = current_employee
+           @employee = current_employee
           session[:employee_id] = @employee.id
           redirect "/employees/#{@employee.id}"
       end
@@ -50,30 +50,26 @@ class EmployeesController < ApplicationController
   end 
 
   #UPDATE
-  get "/employees/:id/edit" do
-      if !logged_in?
-          redirect '/login'
-      end 
-      @employee = Employee.find(params[:id])
-      erb :'/employees/edit'
-     end 
+#   get "/employees/:id/edit" do
+#       if !logged_in?
+#           redirect '/login'
+#       end 
+#       @employee = Employee.find(params[:id])
+#       erb :'/employees/edit'
+#      end 
      
-     patch "/employees/:id" do
-       @employee = Employee.find(params[:id])
-       @employee.update(name: params[:name], email: params[:email], password: params[:password])
-       redirect to "/employees/#{@employee.id}"
-     end
+#      patch "/employees/:id" do
+#        @employee = Employee.find(params[:id])
+#        @employee.update(name: params[:name], email: params[:email], password: params[:password])
+#        redirect to "/employees/#{@employee.id}"
+#      end
 
-     #DELETE   
-     delete "/employees/:id" do
-       @employee = Employee.find(params[:id])
-       @employee = Employee.destroy
-       redirect to "/logout"
-     end
-  
-
-
-
+#      #DELETE   
+#      delete "/employees/:id" do
+#        @employee = Employee.find(params[:id])
+#        @employee = Employee.destroy
+#        redirect to "/logout"
+#      end
 
   get '/login' do
       if !logged_in?

@@ -12,7 +12,6 @@ class ApplicationController < Sinatra::Base
     erb:"/triforge"
   end 
   
-
   helpers do     
     def current_employee
       if @employee != nil

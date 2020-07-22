@@ -48,10 +48,11 @@ class CustomersController < ApplicationController
       @customer = Customer.find_by_id(params[:id])
       erb :'/customers/edit'
      end 
+    
      
      patch "/customers/:id" do
        @customer = Customer.find_by_id(params[:id])
-       @customer.update(company: params[:company], contact_name: params[:contact_name], email: params[:email], phone: params[:phone], web_specs: params[:webspecs]) 
+       @customer.update(company: params[:company], contact_name: params[:contact_name], email: params[:email], phone: params[:phone], web_specs: params[:web_specs]) 
        redirect to "/customers/#{@customer.id}"
      end
   
@@ -61,6 +62,5 @@ class CustomersController < ApplicationController
        @customer = Customer.destroy(params[:id])
        redirect to "/employees/:id"
      end
-  end  
+   end  
   
- 
