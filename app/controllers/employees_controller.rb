@@ -1,4 +1,5 @@
 class EmployeesController < ApplicationController
+    set :method_override, true
     #CREATE    
     get "/new_employee" do
       if !logged_in?
@@ -49,7 +50,9 @@ class EmployeesController < ApplicationController
       end
   end 
 
-  #UPDATE
+  #UPDATE The functionalitty to allow for editing and deleting employees is here 
+  #howerver in this interation of my project I do not want to allow employess to do this 
+  #would be functionality for a admin portal.
 #   get "/employees/:id/edit" do
 #       if !logged_in?
 #           redirect '/login'
@@ -67,7 +70,7 @@ class EmployeesController < ApplicationController
 #      #DELETE   
 #      delete "/employees/:id" do
 #        @employee = Employee.find(params[:id])
-#        @employee = Employee.destroy
+#        @employee.destroy
 #        redirect to "/logout"
 #      end
 

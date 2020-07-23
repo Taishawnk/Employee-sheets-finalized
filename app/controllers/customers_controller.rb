@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-
+  set :method_override, true
     #CREATe
     get "/new_customer" do
       erb :'/customers/new'        
@@ -59,7 +59,7 @@ class CustomersController < ApplicationController
      #DELETE   
      delete "/customers/:id" do
        @customer = Customer.find(params[:id])
-       @customer = Customer.destroy(params[:id])
+       @customer.destroy
        redirect to "/employees/:id"
      end
    end  
