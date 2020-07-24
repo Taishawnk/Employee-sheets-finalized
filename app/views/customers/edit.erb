@@ -3,19 +3,19 @@
     <input id="hidden" type="hidden" name="_method" value="patch">
 
     
-<p><label for="company" id="company">Company_name:</label>
-      <input type="text" name="company" value="<%=@customer.company%>"></p>    
+<p><label for="company" id="company">Company_name:</label><br>
+      <input type="text" name="company" value="<%=@customer.company%>"></p>   
 
-<p><label for="contact_name" id="contact_name">Contacts_Name</label>
+<p><label for="contact_name" id="contact_name">Contacts_Name</label><br>
       <input type="text" name="contact_name" value="<%=@customer.contact_name%>"></p>    
 
-<p><label for="email" id="email">Email</label>
+<p><label for="email" id="email">Email</label><br>
       <input type="text" name="email" value="<%=@customer.email%>" ></p>    
 
-<p><label for="phone" id="phone">Phone</label>
+<p><label for="phone" id="phone">Phone</label><br>
       <input type="text" name="phone" value="<%=@customer.phone%>" ></p>    
 
-<p><label for="web_specs">Customer Specs Discription</label>
+<p><label for="web_specs">Customer Specs Discription</label><br>
 <textarea id="web_specs" name="web_specs" rows="4" cols="50"><%=@customer.web_specs%></textarea></p>
       
     <input type="submit" value="Update">    

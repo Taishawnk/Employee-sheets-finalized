@@ -1,26 +1,30 @@
-<h2>Edit your account details.</h2>
-<form action="/employees/<%= @employee.id %>" method="post">
-    <input id="hidden" type="hidden" name="_method" value="patch">
+<%# <h2>Edit your account details.</h2>
+<form action="/employees/<%= @employee.id %> <%#%"method="post">
+    <%#input id="hidden" type="hidden" name="_method" value="patch">
 
     
-    <p><label for="name" id="name">Name:</label>
-    <input type="text" name="name" value="<%=@employee.name%>"></p><br>
+   <label for="name" id="name">Name:</label>
+    <input type="text" name="name" value="<%=@employee.name%>
 
     
-    <p><label for="email" id="email">Email:</label>
-    <input type="email" name="email" value="<%=@employee.email%>"></p><br>
+    <%#label for="email" id="email">Email:</label>
+    <input type="email" name="email" value="<%=@employee.email%>
 
     
-    <p><label for="password" id="password">Password:</label>
-    <input type="password" name="password" value="<%=@employee.password%>"></p><br>
+    <%#label for="password" id="password">Password:</label>
+    <input type="password" name="password" value="<%=@employee.password%>
 
-    <input type="submit" value="Update">    
+    <%#input type="submit" value="Update">    
 </form>
 
 <h2>To remove your account click DELETE.</h2>
-<form action="/employees/<%= @employee.id %>" method="post">
-  <input id="hidden" type="hidden" name="_method" value="delete">
+<form action="/employees/<%= @employee.id %><%#" method="post">
+  <%#input id="hidden" type="hidden" name="_method" value="delete">
   <input type="submit" value="delete">
 </form>
-<h3>This action cannot be undone!</h3>
-<a href="/employees/<%= @employee.id%>">Never mind</a>
+<h3>This action cannot be undone!</h3%>
+<h1>Unfortunently Employees cannot delete or edit profiles Please contact you Administrator.</h1>
+<a href="/employees/<%= @employee.id%>">Never mind</a>  
+
+<%# 
+If I choose to add this functionality then need to add p tags to begining of the labels and ending at the end of the inputs %>
